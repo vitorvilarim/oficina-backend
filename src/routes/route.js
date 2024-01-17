@@ -1,5 +1,5 @@
 const express = require('express');
-const { registerClient } = require('../controllers/services');
+const { registerClient } = require('../controllers/client');
 const validateRequest = require('../middleware/schemaUser');
 const schemaUser = require('../utils/validations');
 const routes = express();
