@@ -1,5 +1,5 @@
 const knex = require('../config/conection');
-const joi = require('joi');
+
 
 const registerClient = async (require, response) => {
     const { nome, cpf, telefone } = require.body;
@@ -11,6 +11,12 @@ const registerClient = async (require, response) => {
             cpf,
             telefone
         }
+        const verifyCpf = await knex("clientes").where("cpf", cpf).first();
+
+        if (verifyCpf) {
+            return response.status(400).json({ mensagem: "Cliente já está cadastrado." })
+        }
+
         const insertClient = await knex('clientes').insert(newClient).returning('*');
 
         return response.status(201).json(insertClient);
