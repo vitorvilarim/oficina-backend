@@ -1,4 +1,7 @@
 const knex = require('../config/conection');
+const PdfPrinter = require('pdfmake');
+
+
 
 
 const serviceClient = async (request, response) => {
@@ -12,7 +15,8 @@ const serviceClient = async (request, response) => {
             const insertService = await knex('servicos_cliente').insert(newService);
         }
 
-        return response.status(201).json({ mensagem: "Ordem de serviço criada!" })
+
+        return response.status(201).json({ mensagem: "Ordem de serviço criada." });
     } catch (error) {
         console.log(error.message);
         return response.status(500).json({ mensagem: "Erro interno do servidor" })
