@@ -14,7 +14,13 @@ const schemaService = joi.object({
     data_saida: joi.string().required()
 });
 
+const schemaLogin = joi.object({
+    email: joi.string().email().required(),
+    senha: joi.string().required()
+})
+
 const schemaAdmin = joi.object({
+    nome: joi.string().required(),
     email: joi.string().email().required(),
     senha: joi.string().required()
 })
@@ -22,5 +28,6 @@ const schemaAdmin = joi.object({
 module.exports = {
     schemaUser,
     schemaService,
-    schemaAdmin
+    schemaAdmin,
+    schemaLogin
 };
