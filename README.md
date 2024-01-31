@@ -1,7 +1,7 @@
 # martelinho-de-ouro-backend
 
 ## Sobre
-Para a implementação utilizei Javascript e Node.js no desenvolvimento, com Express.js como framework para o servidor web e PostgreSQL como Banco de Dados, aderindo aos princípios SOLID e Clean Code. Foi acrescentado também medidas de segurança, como criptografia e autenticação, usando Json Web Token (JWT) e Bcrypt para proteção de dados sensíveis no banco de dados e no sistema. Além disso o sistema gera um recibo em PDF para facilitar a visualização do cliente dos serviços que serão realizados.
+Para a implementação está sendo utilizado Javascript e Node.js no desenvolvimento, com Express.js como framework para o servidor web e PostgreSQL para o Banco de Dados, desenvolvido com os princípios SOLID e Clean Code. Foi acrescentado também medidas de segurança, como criptografia e autenticação, usando Json Web Token (JWT) e Bcrypt para criptografia de dados sensíveis no banco de dados. Além disso foi adicionado uma biblioteca para gerar recibos em PDF para facilitar a visualização do cliente em relação aos serviços que serão realizados.
 
 A API oferece diversas funcionalidades, tais como:
 
